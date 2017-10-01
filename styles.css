@@ -1,0 +1,30 @@
+html,
+body,
+ul,
+nav,
+header,
+li,
+h1,
+img,
+form,
+input,
+span,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-image: url('./images/main-bg.jpeg');
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    width: 960px;
+    margin: 65px auto;
+}
