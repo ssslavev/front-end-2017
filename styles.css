@@ -14,6 +14,14 @@ p {
     padding: 0;
 }
 
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
 img {
     max-width: 100%;
 }
@@ -24,9 +32,15 @@ body {
     width: 100%;
 }
 
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
 #main {
     max-width: 960px;
     margin: 65px auto;
+    overflow: hidden;
 }
 
 
@@ -154,4 +168,50 @@ li.social {
     .navbar.navbar-inverse .nav-collapse.in.slide-down {
         transform: translate(0px, 0px);
     }
+}
+
+
+/**Carousel**/
+
+#carousel {
+    margin-top: 60px;
+}
+
+#middle {
+    background: url('./images/content.png');
+    height: 930px;
+    width: 100%;
+    margin-top: 72px;
+    border-top: 1px solid #fff;
+}
+
+#middle .wrapper {
+    margin-top: 65px;
+}
+
+#middle li p {
+    color: #838383;
+    height: 140px;
+    overflow: hidden;
+}
+
+#info {
+    background-image: url('./images/gradient.png');
+    height: 158px;
+    width: 100%;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+#info p {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'colaborate-thinregular';
+    margin-top: 10px;
+}
+
+#quote {
+    position: relative;
+    left: 465px;
+    top: -50px;
 }

@@ -9,9 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/slick-carousel": "^1.6.32",
     "bootstrap": "^3.3.7",
     "handlebars": "^4.0.10",
     "jquery": "^3.2.1",
-    "navigo": "^5.3.1"
+    "navigo": "^5.3.1",
+    "slick-carousel": "^1.8.1"
   }
 }
