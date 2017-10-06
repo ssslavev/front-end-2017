@@ -239,3 +239,59 @@ li.social {
 #thumbnails2 {
     margin-top: 45px;
 }
+
+footer {
+    margin-top: 52px;
+    display: flex;
+}
+
+footer h2 {
+    color: #fff;
+}
+
+footer p,
+ul {
+    color: #8b949d;
+}
+
+footer ul {
+    list-style-type: disc;
+}
+
+#nav-footer {
+    height: 65px;
+    margin-top: 70px;
+    background-color: #0f1419;
+}
+
+#nav-footer ul {
+    float: left;
+}
+
+#nav-footer ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 20px 15px 26px 0;
+}
+
+#nav-footer ul li a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+#nav-footer ul li a:hover {
+    font-style: italic;
+    color: #8D96A0;
+}
+
+small {
+    color: #8D96A0;
+    float: right;
+    margin-top: 26px;
+}
+
+small>p {
+    color: white;
+    display: inline;
+}
