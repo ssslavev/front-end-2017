@@ -28,8 +28,8 @@ img {
 
 body {
     background-image: url('./images/main-bg.jpg');
-    height: 100%;
-    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .wrapper {
@@ -179,14 +179,10 @@ li.social {
 
 #middle {
     background: url('./images/content.png');
-    height: 930px;
+    min-height: 930px;
     width: 100%;
     margin-top: 72px;
     border-top: 1px solid #fff;
-}
-
-#middle .wrapper {
-    margin-top: 65px;
 }
 
 #middle li p {
@@ -197,21 +193,49 @@ li.social {
 
 #info {
     background-image: url('./images/gradient.png');
-    height: 158px;
     width: 100%;
     margin-top: 40px;
     display: inline-block;
+    border-top: 1px solid #d8d8d8;
+    min-height: 160px;
 }
 
 #info p {
     text-align: center;
     font-size: 30px;
     font-family: 'colaborate-thinregular';
-    margin-top: 10px;
 }
 
 #quote {
     position: relative;
-    left: 465px;
-    top: -50px;
+    left: 47%;
+    top: -15px;
+}
+
+#text-area {
+    margin-top: 0;
+}
+
+#additional-info {
+    position: relative;
+    left: 43%;
+    top: 25px;
+}
+
+#features-list {
+    margin-top: 65px;
+}
+
+#thumbnails-container {
+    margin-top: 80px;
+}
+
+#thumbnails,
+#thumbnails2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#thumbnails2 {
+    margin-top: 45px;
 }
