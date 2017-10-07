@@ -13,7 +13,7 @@
     "bootstrap": "^3.3.7",
     "handlebars": "^4.0.10",
     "jquery": "^3.2.1",
-    "navigo": "^5.3.1",
+    "sammy": "^0.7.6",
     "slick-carousel": "^1.8.1"
   }
 }

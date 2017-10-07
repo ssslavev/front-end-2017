@@ -1,23 +1,39 @@
 (function() {
 
-    let router = new Navigo(null, false);
+    var sammyApp = Sammy('#main-content', function() {
+        var $main = $('#main-content');
+
+        this.get('#/home', homeController.getHomePage);
+
+        this.get('#/categories', categoriesController.getCategories);
+
+        this.get('#/register', authController.register);
+
+        this.get('#/login', authController.login);
 
 
-    router
-        .on({
+    })
 
-            '/home': () => templates.get("home").then((tmpl) => $('#main-content').html(tmpl)),
-            '/post': () => templates.get("post").then((tmpl) => $('#main-content').html(tmpl)),
-            '/sign': () => templates.get("login").then((tmpl) => $('#main-content').html(tmpl)),
-            '/register': () => templates.get("register").then((tmpl) => $('#main-content').html(tmpl))
+    $(() => {
+        sammyApp.run('#/home')
 
+        console.log(firebase.auth().currentUser);
 
+        if (firebase.auth().currentUser) {
+            $('#signin').addClass('hidden');
+            $('#current-user').html('Hello, ' + firebase.auth().currentUser.email + '!');
 
+        } else {
+
+            $('#logout').addClass('hidden');
+        }
+
+        $('#logout').on('click', () => {
+
+            firebase.auth().signOut();
+            location.reload();
         })
-        .resolve();
 
+    })
 
-
-
-
-}());
+})();

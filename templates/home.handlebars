@@ -1,3 +1,15 @@
+<div id="carousel">
+            <carousel-3d :autoplay="true" :autoplay-timeout="2400">
+                <slide :index="0"><img src="http://www.mypersiankitchen.com/wp-content/uploads/2013/11/Stuffed-Turkey-Breast-28-400x300.jpg" /></slide>
+                <slide :index="1"><img src="https://i.pinimg.com/736x/49/0f/a5/490fa533550444f2630c89a323614baa--cold-dishes-chinese.jpg" /></slide>
+                <slide :index="2"><img src="http://mexican.betterrecipes.com/uploads/photo/400x300/f/f/ff40ddff7fd1e7802fa5435157fdc0a1.jpg" /></slide>
+                <slide :index="3"><img src="http://www.chinafeature.net/images/food/sichuan/sichuan-cuisine.jpg" /></slide>
+                <slide :index="4"><img src="https://opinionstage-res.cloudinary.com/image/upload/c_fill,f_auto,fl_lossy,h_300,q_auto:good,w_400/v1474469173/polls/ograbxoacbdbi6vseskf.jpg" /></slide>
+                <slide :index="5"><img src="http://lib5.thenmedia.co.uk/med/souvlaki-is-a-popular-greek-dish-M2691.jpg" /></slide>
+                <slide :index="6"><img src="https://i.pinimg.com/736x/62/9e/17/629e1769d27108ca9f8d84d2c364d965--food-trip-seafood-dishes.jpg" /></slide>
+                <slide :index="7"><img src="http://procaffenation.com/wp-content/uploads/2017/04/famous-indian-dishes-6-400x300.jpg" /></slide>
+            </carousel-3d>
+        </div>
 <div id="middle">
     <div class="wrapper">
         <div class="roll">
@@ -116,3 +128,17 @@
         </div>
     </div>
 </div>
+<script>
+        $(function() {
+            new Vue({
+                el: '#carousel',
+                data: {
+                    slides: 7
+                },
+                components: {
+                    'carousel-3d': Carousel3d.Carousel3d,
+                    'slide': Carousel3d.Slide
+                }
+            })
+        });
+    </script>

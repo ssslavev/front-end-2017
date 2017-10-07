@@ -19,12 +19,18 @@
                 <div class="col-md-6">
                     <header>
                         <h1 class="responsive-logo">
-                            <a href="#"><img src="./images/envisioned.png" alt="site-logo"></a>
+                            <a href="#/home"><img src="./images/envisioned.png" alt="site-logo"></a>
                         </h1>
 
                     </header>
                 </div>
+                <div id="register-link" class="col-md-6 right">
+                    <a id="signin" href="#/register">Sign up/Sign in</a>
+                    <a id="current-user" href=""></a>
+                    <a id="logout" role="button" tabindex="0">Log out</a>
+                </div>
             </div>
+
         </div>
         <nav class="navbar navbar-default" id="main-nav">
             <div class="container">
@@ -41,21 +47,12 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Works</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#/home">Home</a></li>
+                        <li><a href="#/about">About</a></li>
+                        <li><a href="#/categories">Categories</a></li>
+                        <li><a href="#/works">Works</a></li>
+                        <li><a href="#/news">News</a></li>
+                        <li><a href="#/contact">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="social">
@@ -74,20 +71,6 @@
             <!-- /.container -->
         </nav>
         <!-- /.navbar -->
-
-        <div id="carousel">
-            <carousel-3d :autoplay="true" :autoplay-timeout="2400">
-                <slide :index="0"><img src="https://res.cloudinary.com/ameo/image/upload/v1498843587/kTcPaQR_x77hor.jpg" /></slide>
-                <slide :index="1"><img src="https://unsplash.it/400/300?image=456" /></slide>
-                <slide :index="2"><img src="https://unsplash.it/400/300?image=222" /></slide>
-                <slide :index="3"><img src="https://unsplash.it/400/300?image=1003" /></slide>
-                <slide :index="4"><img src="https://unsplash.it/400/300?image=940" /></slide>
-                <slide :index="5"><img src="https://unsplash.it/400/300?image=944" /></slide>
-                <slide :index="6"><img src="https://unsplash.it/400/300?image=219" /></slide>
-                <slide :index="7"><img src="https://unsplash.it/400/300?image=1041" /></slide>
-            </carousel-3d>
-        </div>
-
     </div>
 
     <div id="main-content"></div>
@@ -137,27 +120,38 @@
 
 
 
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDCloj4Z96kjAbjaez8ldJH0hzOS3cPm7w",
+            authDomain: "front-end-2017.firebaseapp.com",
+            databaseURL: "https://front-end-2017.firebaseio.com",
+            projectId: "front-end-2017",
+            storageBucket: "",
+            messagingSenderId: "272144774374"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.7/vue.js"></script>
     <script type="text/javascript" src="https://rawgit.com/Wlada/vue-carousel-3d/master/dist/vue-carousel-3d.min.js"></script>
-    <script>
-        new Vue({
-            el: '#carousel',
-            data: {
-                slides: 7
-            },
-            components: {
-                'carousel-3d': Carousel3d.Carousel3d,
-                'slide': Carousel3d.Slide
-            }
-        })
-    </script>
     <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
-    <script src="./node_modules/navigo/lib/navigo.min.js"></script>
+    <script src="./node_modules/sammy/lib/sammy.js"></script>
     <script src="./js/templates.js"></script>
+
+    <script src="./controllers/homeController.js"></script>
+    <script src="./controllers/categoriesController.js"></script>
+    <script src="./controllers/authController.js"></script>
+
+
+
     <script src="./js/app.js"></script>
+
 
 </body>
 
