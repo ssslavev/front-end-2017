@@ -11,6 +11,10 @@
 
         this.get('#/login', authController.login);
 
+        this.get('#/add-recipe', recipeController.addRecipe)
+
+        this.get('#/all-recipes', recipeController.getAllRecipes)
+
 
     })
 

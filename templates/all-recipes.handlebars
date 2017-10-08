@@ -1,0 +1,49 @@
+<div id="middle">
+    <div class="wrapper">
+        <div class="row">
+        <div class="col-md-4 recent pull-right">
+            <div class="container-fluid posts text-left">
+                <h4 class="text-left">Recent Posts</h4>
+                <div class="container-fluid color-light field">
+                    <ul>
+                        {{#each recentPosts}}
+                        <li><a href="#/posts/{{id}}">{{title}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="container-fluid comments text-left">
+                <h4 class="text-left">Recent Comments</h4>
+                <div class="container-fluid color-light field">
+                    <ul>
+                        {{#each recentComments}}
+                        <li><a href="#/posts/{{postId}}">{{body}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        {{#if recipes}} {{#each recipes}}
+        <div class="row">
+            <div class="col-md-7" id="recipe">
+
+                <h1 id="post-title"><a href="#/recipes/{{this._key}}">{{this.title}}</a></h1>
+                <div class="posted-by">
+                    <hr class="line-with-shadow" /> Posted by {{this.userEmail}} on {{this.date}} in {{this.category}} | {{this.commentsCount}} Comments
+                </div>
+                <img src="{{this.image}}" alt="post img" height="220" width="220" class="pull-left img-responsive postImg img-thumbnail">
+                <article>
+                    <p>
+                        {{this.text}}
+                    </p>
+                </article>
+                <div class="col-md-12">
+                    <button class="btn btn-default btn-xs pull-right read-more"><a href="#/recipes/{{this._key}}">Read more</a></button>
+                </div>
+            </div>
+        </div>
+        {{/each}} {{/if}}
+
+    </div>
+</div>

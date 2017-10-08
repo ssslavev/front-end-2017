@@ -190,6 +190,7 @@ li.social {
     margin-top: 72px;
     border-top: 1px solid #fff;
     padding-top: 50px;
+    padding-bottom: 300px;
 }
 
 #middle li p {
@@ -419,4 +420,89 @@ small>p {
 
 #logout {
     color: #59B2E0;
+}
+
+.red {
+    color: red;
+}
+
+.form-area {
+    background-color: #FAFAFA;
+    padding: 10px 40px 60px;
+    margin: 10px 0px 60px;
+    border: 1px solid GREY;
+}
+
+.line-with-shadow {
+    border: 0;
+    height: 1px;
+    position: relative;
+    background-color: #fff;
+}
+
+.line-with-shadow:before {
+    top: -6px;
+    height: 1em;
+    left: 0;
+}
+
+.line-with-shadow:after {
+    content: '';
+    height: 0.5em;
+    top: -7px;
+    left: 0;
+}
+
+.line-with-shadow:before,
+.line-with-shadow:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+}
+
+.line-with-shadow,
+.line-with-shadow:before {
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 75%);
+}
+
+.line-with-shadow:after {
+    background: #eaeaea;
+}
+
+.read-more {
+    margin-top: 1.6em;
+    margin-right: 1.5em;
+    border-radius: 1em !important;
+    background-color: #303840 !important;
+    background-image: none !important;
+    width: 7em !important;
+    color: #fff !important;
+    padding: 0.2em !important;
+    height: 2.4em !important;
+    font-size: 0.85em !important;
+}
+
+.read-more a {
+    color: #fff;
+}
+
+.read-more a:hover {
+    text-decoration: none;
+}
+
+#post-title {
+    font-size: 3rem;
+}
+
+#recipe article {
+    text-align: justify;
+    word-break: break-all;
+}
+
+#recipe p {
+    color: #838383;
+}
+
+#recipe img {
+    margin-right: 25px;
 }
