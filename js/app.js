@@ -15,6 +15,8 @@
 
         this.get('#/all-recipes', recipeController.getAllRecipes)
 
+        this.get('#/recipes/:id', recipeController.getRecipeById)
+
 
     })
 

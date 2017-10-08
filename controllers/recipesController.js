@@ -46,34 +46,50 @@ let recipeController = (function() {
                         image: child.val().image,
                         userEmail: child.val().userEmail,
                         date: child.val().date,
+                        comments: child.val().comments,
                         _key: child.key,
                     });
                 })
-                console.log(recipes)
-
-                //recipes = snapshot.val();
-                //console.log(recipes);
+                console.log(recipes);
 
                 return templates.get('all-recipes')
             })
             .then((tmpl) => {
                 context.$element().html(tmpl({ recipes: recipes }));
 
-
-
-                //return templates.get('all-recipes')
-                //.then((tmpl) => {
-                //  context.$element().html(tmpl);
-
-
-                // return firebase.database().ref().child('recipes').once('value').then(function(snapshot) {
-                //   var recipe = snapshot.val();
-
             })
+    }
+
+    function getRecipeById(context) {
+        let id = context.params['id'];
+        let recipe;
+
+        return firebase.database().ref().child(`recipes/${id}`).once('value')
+            .then((snap) => {
+                recipe = snap.val();
+
+                return templates.get('recipe');
+            })
+            .then((tmpl) => {
+                context.$element().html(tmpl(recipe));
+
+                $("body").on('click', '#comment-submit', () => {
+
+                    const database = firebase.database();
+
+                    let comment = $('#recipe-comment').val();
+                    console.log(comment);
+                    database.ref(`recipes/${id}/comments/`).push({
+                        text: comment
+                    })
+                });
+            })
+
     }
 
     return {
         addRecipe,
-        getAllRecipes
+        getAllRecipes,
+        getRecipeById
     }
 })();
