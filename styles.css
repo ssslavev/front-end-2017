@@ -9,7 +9,9 @@ img,
 form,
 input,
 span,
-p {
+p,
+footer,
+carousel-3d {
     margin: 0;
     padding: 0;
 }
@@ -30,6 +32,11 @@ body {
     background-image: url('./images/main-bg.jpg');
     max-height: 100%;
     max-width: 100%;
+}
+
+nav ul li a:hover {
+    font-style: italic;
+    color: #8D96A0;
 }
 
 #register-link {
@@ -216,7 +223,7 @@ li.social {
 
 #quote {
     position: relative;
-    left: 47%;
+    left: 48%;
     top: -15px;
 }
 
@@ -226,7 +233,6 @@ li.social {
 
 #additional-info {
     position: relative;
-    left: 43%;
     top: 25px;
 }
 
@@ -473,13 +479,33 @@ small>p {
     margin-top: 1.6em;
     margin-right: 1.5em;
     border-radius: 1em !important;
-    background-color: #303840 !important;
     background-image: none !important;
     width: 7em !important;
     color: #fff !important;
     padding: 0.2em !important;
     height: 2.4em !important;
     font-size: 0.85em !important;
+}
+
+.read-more-black {
+    background-color: #303840;
+    margin-top: 1.6em;
+    margin-right: 1.5em;
+    border-radius: 1em !important;
+    background-image: none !important;
+    width: 7em !important;
+    color: #fff !important;
+    padding: 0.2em !important;
+    height: 2.4em !important;
+    font-size: 0.85em !important;
+}
+
+.read-more-black a {
+    color: #fff;
+}
+
+.read-more-black a:hover {
+    text-decoration: none;
 }
 
 .read-more a {
@@ -685,4 +711,76 @@ small>p {
 
 #recent {
     width: 40%;
+}
+
+.additional {
+    display: flex;
+    justify-content: center;
+}
+
+.recent .posts .field {
+    border-radius: 0.8em;
+    border: 1px solid #d3d3d3;
+    width: 272px;
+    background-image: url('./images/aside-gradient.png');
+}
+
+.recent .posts .field ul {
+    list-style-type: none;
+    margin: 1.8em 0em;
+    padding-left: 30px;
+    text-align: left !important;
+    width: 240px;
+}
+
+.recent .posts .field ul li {
+    width: 100%;
+    text-align: left !important;
+}
+
+.recent .posts .field ul li a {
+    font-size: 0.9em;
+    color: #000;
+}
+
+.recent .posts .field ul li+li {
+    margin-top: 1em;
+}
+
+.recent .comments h4 {
+    margin-top: 1.3em;
+    margin-left: 0.5em;
+}
+
+.recent .comments .field {
+    border-radius: 0.8em;
+    border: 1px solid #d3d3d3;
+    width: 272px;
+    background-image: url('./images/aside-gradient.png');
+}
+
+.recent .comments .field ul {
+    list-style-type: none;
+    margin: 1.8em 0em;
+    padding-left: 30px;
+    text-align: left !important;
+    width: 240px;
+}
+
+.recent .comments .field ul li {
+    width: 100%;
+    text-align: left !important;
+}
+
+.recent .comments .field ul li a {
+    font-size: 0.9em;
+    color: #000;
+}
+
+.recent .comments .field ul li+li {
+    margin-top: 1em;
+}
+
+.color-light {
+    background-color: #fff;
 }

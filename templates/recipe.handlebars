@@ -1,103 +1,98 @@
 <div id="middle">
     <div class="wrapper">
-        <div class="row">
-            <div class="col-md-4 recent pull-right">
-                <div class="container-fluid posts text-left">
-                    <h4 class="text-left">Recent Posts</h4>
-                    <div class="container-fluid color-light field">
-                        <ul>
-                            {{#each recentPosts}}
-                            <li><a href="#/posts/{{id}}">{{title}}</a></li>
-                            {{/each}}
-                        </ul>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="row">
+                        <h1 id="post-title">{{this.title}}</h1>
+                        <div class="posted-by">
+                            <hr class="line-with-shadow" /> Posted by {{this.userEmail}} on {{this.date}} in {{this.category}} | {{this.commentsCount}}
+                            Comments
+                        </div>
+                        <img src="{{this.image}}" alt="post img" height="220" width="220" class="pull-left img-responsive postImg img-thumbnail">
+                        <article>
+                            <p>
+                                {{this.text}}
+                            </p>
+                        </article>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>User Comment Example</h3>
+                                <hr class="line-with-shadow" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="thumbnail">
+                                    <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                                </div>
+                                <!-- /thumbnail -->
+                            </div>
+                            <!-- /col-sm-1 -->
+
+                            <div class="col-sm-10">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+                                    </div>
+                                    <div class="panel-body">
+                                        Panel content
+                                    </div>
+                                    <!-- /panel-body -->
+                                </div>
+                                <!-- /panel panel-default -->
+                            </div>
+                            <!-- /col-sm-5 -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h3>Leave a Comment</h3>
+                                    <hr class="line-with-shadow" />
+                                </div>
+                                <!-- /col-sm-12 -->
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="widget-area no-padding blank">
+                                        <div class="status-upload">
+                                            <form>
+                                                <textarea id="recipe-comment" placeholder="What are you doing right now?"></textarea>
+                                                <button type="submit" id="comment-submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+                                            </form>
+                                        </div>
+                                        <!-- Status Upload  -->
+                                    </div>
+                                    <!-- Widget Area -->
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="container-fluid comments text-left">
-                    <h4 class="text-left">Recent Comments</h4>
-                    <div class="container-fluid color-light field">
-                        <ul>
-                            {{#each recentComments}}
-                            <li><a href="#/posts/{{postId}}">{{body}}</a></li>
-                            {{/each}}
-                        </ul>
+                <div class="col-md-3 col-md-offset-2 recent pull-right">
+                    <div class="row">
+                        <div class="container-fluid posts text-left">
+                            <h4 class="text-left">Recent Posts</h4>
+                            <div class="container-fluid color-light field">
+                                <ul>
+                                    {{#each recentPosts}}
+                                    <li><a href="#/posts/{{id}}">{{title}}</a></li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="container-fluid comments text-left">
+                            <h4 class="text-left">Recent Comments</h4>
+                            <div class="container-fluid color-light field">
+                                <ul>
+                                    {{#each recentComments}}
+                                    <li><a href="#/posts/{{postId}}">{{body}}</a></li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-7" id="recipe">
-
-                <h1 id="post-title">{{this.title}}</h1>
-                <div class="posted-by">
-                    <hr class="line-with-shadow" /> Posted by {{this.userEmail}} on {{this.date}} in {{this.category}} | {{this.commentsCount}} Comments
-                </div>
-                <img src="{{this.image}}" alt="post img" height="220" width="220" class="pull-left img-responsive postImg img-thumbnail">
-                <article>
-                    <p>
-                        {{this.text}}
-                    </p>
-                </article>
-            </div>
-        </div>
-        <div class="container" id="comments">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h3>User Comment Example</h3>
-                    <hr class="line-with-shadow" />
-                </div>
-                <!-- /col-sm-12 -->
-            </div>
-            <!-- /row -->
-            <div class="row">
-                <div class="col-sm-1">
-                    <div class="thumbnail">
-                        <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
-                    </div>
-                    <!-- /thumbnail -->
-                </div>
-                <!-- /col-sm-1 -->
-
-                <div class="col-sm-5">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
-                        </div>
-                        <div class="panel-body">
-                            Panel content
-                        </div>
-                        <!-- /panel-body -->
-                    </div>
-                    <!-- /panel panel-default -->
-                </div>
-                <!-- /col-sm-5 -->
-            </div>
-            <!-- /row -->
-            <div class="row">
-                <div class="col-sm-6">
-                    <h3>Leave a Comment</h3>
-                    <hr class="line-with-shadow" />
-                </div>
-                <!-- /col-sm-12 -->
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="widget-area no-padding blank">
-                        <div class="status-upload">
-                            <form>
-                                <textarea id="recipe-comment" placeholder="What are you doing right now?"></textarea>
-                                <button type="submit" id="comment-submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
-                            </form>
-                        </div>
-                        <!-- Status Upload  -->
-                    </div>
-                    <!-- Widget Area -->
-                </div>
-
-            </div>
-        </div>
-
     </div>
-    <!-- /container -->
-</div>
 </div>
