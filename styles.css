@@ -34,8 +34,8 @@ body {
 }
 
 nav ul li a:hover {
-    font-style: italic;
     color: #8D96A0;
+    font-style: italic;
 }
 
 #register-link {
@@ -45,14 +45,14 @@ nav ul li a:hover {
 }
 
 .wrapper {
-    max-width: 960px;
     margin: 0 auto;
+    max-width: 960px;
 }
 
 #main {
-    max-width: 960px;
     margin: 65px auto;
     overflow: hidden;
+    max-width: 960px;
 }
 
 
@@ -75,9 +75,9 @@ nav ul li a:hover {
     color: #fff;
 }
 
-li.social {
-    width: 25px;
+.social {
     height: 25px;
+    width: 25px;
 }
 
 #main-nav ul li a:hover {
@@ -755,7 +755,6 @@ small>p {
     border-radius: 0.8em;
     border: 1px solid #d3d3d3;
     width: 272px;
-    background-image: url('./images/aside-gradient.png');
 }
 
 .recent .comments .field ul {
@@ -796,4 +795,7 @@ small>p {
     /*this makes sure to maintain the aspect ratio*/
 }
 
-footer .container {}
+.posted-by {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}

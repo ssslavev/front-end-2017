@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-7" id="recipe">
                     {{#each recipeArr}}
                     <div class="row">
                         <h1 id="post-title">{{this.title}}</h1>
@@ -60,7 +60,7 @@
                                         <div class="status-upload">
                                             <form>
                                                 <textarea id="recipe-comment" placeholder="What are you doing right now?"></textarea>
-                                                <button type="submit" id="comment-submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+                                                <button type="button" id="comment-submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
                                             </form>
                                         </div>
                                         <!-- Status Upload  -->

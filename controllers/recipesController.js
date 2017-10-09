@@ -28,7 +28,7 @@ let recipeController = (function() {
                         uid: firebase.auth().currentUser.uid,
                         userEmail: firebase.auth().currentUser.email
                     }).then(() => {
-                        context.redirect('#/home');
+                        location.reload();
                     })
                 });
             })
@@ -41,7 +41,7 @@ let recipeController = (function() {
 
         Promise.all([data.recipes.getAllRecipes(), data.recipes.getLimitRecipes(5), data.recipes.getLastComments(8)])
             .then(([reqRecipes, reqLimitRecipes, reqLastComments]) => {
-                recipes = reqRecipes;
+                recipes = reqRecipes.reverse();
                 limitRecipes = reqLimitRecipes;
                 lastComments = reqLastComments;
                 console.log(recipes);
@@ -85,8 +85,13 @@ let recipeController = (function() {
                     let comment = $('#recipe-comment').val();
                     console.log(comment);
                     database.ref(`recipes/${id}/comments/`).push({
-                        text: comment
-                    })
+                            text: comment
+                        })
+                        .then(() => {
+
+                            window.location.href = `#/recipes/${id}`
+                            location.reload();
+                        })
                 });
             })
 
