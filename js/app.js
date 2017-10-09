@@ -25,14 +25,14 @@
 
         console.log(firebase.auth().currentUser);
 
-        if (firebase.auth().currentUser) {
-            $('#signin').addClass('hidden');
-            $('#current-user').html('Hello, ' + firebase.auth().currentUser.email + '!');
-
-        } else {
-
-            $('#logout').addClass('hidden');
-        }
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                $('#signin').addClass('hidden');
+                $('#current-user').html('Hello, ' + firebase.auth().currentUser.email + '!');
+            } else {
+                $('#logout').addClass('hidden');
+            }
+        });
 
         $('#logout').on('click', () => {
 

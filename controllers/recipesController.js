@@ -27,6 +27,8 @@ let recipeController = (function() {
                         date: new Date().toLocaleString(),
                         uid: firebase.auth().currentUser.uid,
                         userEmail: firebase.auth().currentUser.email
+                    }).then(() => {
+                        context.redirect('#/home');
                     })
                 });
             })
@@ -59,6 +61,8 @@ let recipeController = (function() {
 
             })
     }
+
+
 
     function getRecipeById(context) {
         let id = context.params['id'];
