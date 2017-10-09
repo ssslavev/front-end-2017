@@ -36,28 +36,20 @@ let recipeController = (function() {
 
     function getAllRecipes(context) {
         let recipes = [];
+        let limitRecipes;
+        let lastComments;
 
-        return firebase.database().ref().child('recipes').once('value')
-            .then((snapshot) => {
-
-                snapshot.forEach((child) => {
-                    recipes.push({
-                        text: child.val().text,
-                        category: child.val().category,
-                        title: child.val().title,
-                        image: child.val().image,
-                        userEmail: child.val().userEmail,
-                        date: child.val().date,
-                        comments: child.val().comments,
-                        _key: child.key,
-                    });
-                })
+        Promise.all([data.recipes.getAllRecipes(), data.recipes.getLimitRecipes(5), data.recipes.getLastComments(8)])
+            .then(([reqRecipes, reqLimitRecipes, reqLastComments]) => {
+                recipes = reqRecipes;
+                limitRecipes = reqLimitRecipes;
+                lastComments = reqLastComments;
                 console.log(recipes);
-
+                console.log(lastComments);
                 return templates.get('all-recipes')
             })
             .then((tmpl) => {
-                context.$element().html(tmpl({ recipes: recipes }));
+                context.$element().html(tmpl({ recipes: recipes, limitRecipes: limitRecipes, lastComments: lastComments }));
 
             })
     }
@@ -67,15 +59,24 @@ let recipeController = (function() {
     function getRecipeById(context) {
         let id = context.params['id'];
         let recipe;
+        let limitRecipes;
+        let lastComments;
+        let recipeArr = [];
 
-        return data.recipes.getById(id)
-            .then((snap) => {
+        Promise.all([data.recipes.getById(id), data.recipes.getLimitRecipes(5), data.recipes.getLastComments(8)])
+            .then(([snap, reqLimitRecipes, reqLastComments]) => {
+
                 recipe = snap.val();
-
+                recipeArr.push(recipe);
+                console.log(recipe);
+                limitRecipes = reqLimitRecipes;
+                lastComments = reqLastComments;
+                console.log(limitRecipes);
+                console.log(lastComments);
                 return templates.get('recipe');
             })
             .then((tmpl) => {
-                context.$element().html(tmpl(recipe));
+                context.$element().html(tmpl({ recipeArr, limitRecipes, lastComments }));
 
                 $("body").on('click', '#comment-submit', () => {
 

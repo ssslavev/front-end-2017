@@ -30,8 +30,7 @@ img {
 
 body {
     background-image: url('./images/main-bg.jpg');
-    max-height: 100%;
-    max-width: 100%;
+    background-size: auto auto;
 }
 
 nav ul li a:hover {
@@ -796,3 +795,5 @@ small>p {
     height: 130px;
     /*this makes sure to maintain the aspect ratio*/
 }
+
+footer .container {}
