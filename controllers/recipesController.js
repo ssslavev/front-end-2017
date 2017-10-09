@@ -68,7 +68,7 @@ let recipeController = (function() {
         let id = context.params['id'];
         let recipe;
 
-        return firebase.database().ref().child(`recipes/${id}`).once('value')
+        return data.recipes.getById(id)
             .then((snap) => {
                 recipe = snap.val();
 

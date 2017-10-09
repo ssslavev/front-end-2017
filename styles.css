@@ -784,3 +784,15 @@ small>p {
 .color-light {
     background-color: #fff;
 }
+
+.gallery {
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.gallery .thumbnail img {
+    width: 250px;
+    /*set the width or max-width*/
+    height: 130px;
+    /*this makes sure to maintain the aspect ratio*/
+}

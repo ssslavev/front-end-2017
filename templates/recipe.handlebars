@@ -21,7 +21,9 @@
                                 <hr class="line-with-shadow" />
                             </div>
                         </div>
+
                         <div class="row">
+                            {{#each comments}}
                             <div class="col-sm-2">
                                 <div class="thumbnail">
                                     <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
@@ -29,19 +31,20 @@
                                 <!-- /thumbnail -->
                             </div>
                             <!-- /col-sm-1 -->
-
+                            
                             <div class="col-sm-10">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
                                     </div>
                                     <div class="panel-body">
-                                        Panel content
+                                         {{text}} 
                                     </div>
                                     <!-- /panel-body -->
                                 </div>
                                 <!-- /panel panel-default -->
                             </div>
+                            {{/each}}
                             <!-- /col-sm-5 -->
                             <div class="row">
                                 <div class="col-sm-12">
