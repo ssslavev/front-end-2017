@@ -4,26 +4,40 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "start": "harp server --port $PORT",
         "dev": "live-server",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@types/pump": "^1.0.1",
         "@types/sammy": "0.0.20",
         "@types/slick-carousel": "^1.6.32",
         "bootstrap": "^3.3.7",
         "handlebars": "^4.0.10",
         "jquery": "^3.2.1",
+        "pump": "^1.0.2",
         "sammy": "^0.7.6",
-        "slick-carousel": "^1.8.1"
+        "slick-carousel": "^1.8.1",
+        "harp": "*"
     },
     "devDependencies": {
+        "@types/babel-core": "^6.25.2",
+        "@types/gulp": "^4.0.4",
+        "@types/gulp-babel": "^6.1.29",
+        "@types/gulp-uglify": "^3.0.2",
+        "babel-core": "^6.26.0",
+        "babel-preset-env": "^1.6.0",
         "eslint": "^4.8.0",
         "eslint-config-standard": "^10.2.1",
         "eslint-plugin-import": "^2.7.0",
         "eslint-plugin-node": "^5.2.0",
         "eslint-plugin-promise": "^3.5.0",
-        "eslint-plugin-standard": "^3.0.1"
+        "eslint-plugin-standard": "^3.0.1",
+        "gulp": "^3.9.1",
+        "gulp-babel": "^7.0.0",
+        "gulp-clean": "^0.3.2",
+        "gulp-uglify": "^3.0.0"
     }
 }
