@@ -1,28 +1,29 @@
 {
-  "name": "front-end",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/sammy": "0.0.20",
-    "@types/slick-carousel": "^1.6.32",
-    "bootstrap": "^3.3.7",
-    "handlebars": "^4.0.10",
-    "jquery": "^3.2.1",
-    "sammy": "^0.7.6",
-    "slick-carousel": "^1.8.1"
-  },
-  "devDependencies": {
-    "eslint": "^4.8.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.2.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
-  }
+    "name": "front-end",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "live-server",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/sammy": "0.0.20",
+        "@types/slick-carousel": "^1.6.32",
+        "bootstrap": "^3.3.7",
+        "handlebars": "^4.0.10",
+        "jquery": "^3.2.1",
+        "sammy": "^0.7.6",
+        "slick-carousel": "^1.8.1"
+    },
+    "devDependencies": {
+        "eslint": "^4.8.0",
+        "eslint-config-standard": "^10.2.1",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-node": "^5.2.0",
+        "eslint-plugin-promise": "^3.5.0",
+        "eslint-plugin-standard": "^3.0.1"
+    }
 }
