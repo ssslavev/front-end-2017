@@ -1,3 +1,8 @@
+@font-face {
+    font-family: colaborate-thin;
+    src: url('./fonts/Colaborate-fontfacekit/web fonts/colaborate_thin_macroman/ColabThi-webfont.woff');
+}
+
 html,
 body,
 ul,
@@ -17,7 +22,9 @@ carousel-3d {
 }
 
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: colaborate-thin, sans-serif;
+    font-style: normal;
+    font-weight: 200;
 }
 
 ul {
@@ -31,6 +38,7 @@ img {
 body {
     background-image: url('./images/main-bg.jpg');
     background-size: auto auto;
+    font-family: inherit;
 }
 
 nav ul li a:hover {
@@ -63,6 +71,8 @@ nav ul li a:hover {
 }
 
 #main-nav {
+    font-family: 'Droid Sans';
+    font-size: 1.2rem;
     margin-top: 35px;
     border-radius: 10px;
     background: url('./images/nav.png');
@@ -82,6 +92,11 @@ nav ul li a:hover {
 
 #main-nav ul li a:hover {
     color: #8d96a0;
+}
+
+#main-nav ul li a:focus {
+    color: #8d96a0;
+    font-style: italic;
 }
 
 .navbar-nav.navbar-right {
@@ -237,6 +252,10 @@ nav ul li a:hover {
 
 #features-list {
     margin-top: 65px;
+}
+
+#features-list h2 {
+    font-size: 2.4rem;
 }
 
 #thumbnails-container {
@@ -516,12 +535,14 @@ small>p {
 }
 
 #post-title a {
+    font-family: colaborate-thin;
     font-size: 3rem;
     text-decoration: none;
     color: #000;
 }
 
 #post-title {
+    font-family: colaborate-thin;
     font-size: 3rem;
     text-decoration: none;
     color: #000;

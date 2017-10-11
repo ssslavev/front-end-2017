@@ -19,7 +19,7 @@
 
     $(() => {
         sammyApp.run('#/home');
-        console.log(firebase.auth().currentUser);
+        //console.log(firebase.auth().currentUser);
 
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {

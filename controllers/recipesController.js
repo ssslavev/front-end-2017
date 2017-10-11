@@ -12,10 +12,10 @@ let recipeController = (function() {
                     let image = $('#recipe-image').val();
                     let text = $('#recipe-text').val();
 
-                    console.log(title);
-                    console.log(category);
-                    console.log(image);
-                    console.log(text);
+                    //console.log(title);
+                    //console.log(category);
+                    //console.log(image);
+                    //console.log(text);
 
                     const database = firebase.database();
 
@@ -58,6 +58,7 @@ let recipeController = (function() {
 
     function getRecipeById(context) {
         let id = context.params['id'];
+
         let recipe;
         let limitRecipes;
         let lastComments;
@@ -68,11 +69,11 @@ let recipeController = (function() {
 
                 recipe = snap.val();
                 recipeArr.push(recipe);
-                console.log(recipe);
+                //console.log(recipe);
                 limitRecipes = reqLimitRecipes;
                 lastComments = reqLastComments;
-                console.log(limitRecipes);
-                console.log(lastComments);
+                //console.log(limitRecipes);
+                //console.log(lastComments);
                 return templates.get('recipe');
             })
             .then((tmpl) => {
@@ -83,7 +84,7 @@ let recipeController = (function() {
                     const database = firebase.database();
 
                     let comment = $('#recipe-comment').val();
-                    console.log(comment);
+                    //console.log(comment);
                     database.ref(`recipes/${id}/comments/`).push({
                             text: comment
                         })
