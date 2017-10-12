@@ -45,7 +45,6 @@ body {
 
 nav ul li a:hover {
     color: #8D96A0;
-    font-style: italic;
 }
 
 #register-link {
@@ -73,6 +72,7 @@ nav ul li a:hover {
 }
 
 #main-nav {
+    position: relative;
     font-family: 'Droid Sans';
     font-size: 1.2rem;
     margin-top: 35px;
@@ -99,6 +99,7 @@ nav ul li a:hover {
 #main-nav ul li a:focus {
     color: #8d96a0;
     font-style: italic;
+    font-family: serif;
 }
 
 .navbar-nav.navbar-right {
@@ -242,6 +243,7 @@ nav ul li a:hover {
     font-size: 3rem;
     font-family: 'colaborate-thin';
     overflow: hidden;
+    color: #343434;
 }
 
 #quote {
@@ -311,7 +313,6 @@ footer ul {
 }
 
 #nav-footer ul li a:hover {
-    font-style: italic;
     color: #8D96A0;
 }
 
@@ -814,7 +815,7 @@ small>p {
     margin-top: 50px;
 }
 
-.gallery img:hover {
+.gallery-item:hover img {
     opacity: 0.5;
 }
 
@@ -868,7 +869,6 @@ small>p {
 }
 
 .gallery {
-    padding: .5vw;
     font-size: 0;
     display: -ms-flexbox;
     -ms-flex-wrap: wrap;
@@ -886,8 +886,9 @@ small>p {
     -ms-flex: auto;
     flex: auto;
     width: 150px;
-    margin: 0.4vw;
+    margin: 15px;
     margin-bottom: 40px;
+    position: relative;
 }
 
 .gallery-item img {
@@ -904,4 +905,44 @@ small>p {
     .gallery {
         padding: 0;
     }
+}
+
+.zoom-icon {
+    background-image: url('./images/small-zoom.png');
+    margin: 0;
+    position: absolute;
+    display: block;
+    height: 37px;
+    width: 37px;
+    top: 30%;
+    left: 50%;
+    opacity: 0;
+    visibility: visible;
+    text-indent: -9999px;
+}
+
+.more-icon {
+    background-image: url('./images/small-link.png');
+    margin: 0;
+    position: absolute;
+    display: block;
+    height: 37px;
+    width: 37px;
+    top: 30%;
+    left: 25%;
+    opacity: 0;
+    visibility: visible;
+    text-indent: -9999px;
+}
+
+.gallery-item:hover a.zoom-icon {
+    opacity: 1;
+}
+
+.gallery-item:hover a.more-icon {
+    opacity: 1;
+}
+
+#inner-footer {
+    margin-top: 50px;
 }

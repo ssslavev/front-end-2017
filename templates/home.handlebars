@@ -54,7 +54,7 @@
                 </li>
                 <li class="col-md-4">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 text-right">
                             <img src="images/f3-icon.png" alt="feature-icon" id="f-3" />
                         </div>
                         <div class="col-md-9 f-1">
@@ -89,18 +89,18 @@
         </div>
     </div>
     <div class="wrapper">
-
-      
-            <div class='gallery'>
-                {{#each recipes}}
-                <div class="gallery-item">
-                    <a href="#/recipes/{{this._key}}" >
+        <div class='gallery'>
+            {{#each recipes}}
+            <div class="gallery-item">
+                <a href="#/recipes/{{this._key}}">
                         <img  src="{{this.image}}"  alt="...">
                     </a>
-                </div>
-                {{/each}}
+                    <a class="zoom-icon" href="../images/small-zoom.png">Zoom</a>
+                    <a class="more-icon" href="../images/small-zoom.png">More</a>
             </div>
-       
+            {{/each}}
+        </div>
+
     </div>
 </div>
 

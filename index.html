@@ -46,7 +46,10 @@
                     <ul class="nav navbar-nav navbar-left">
                         <li><a href="#/home">Home</a></li>
                         <li><a href="#/all-recipes">All Recipes</a></li>
-                        <li><a href="#/categories">Categories</a></li>
+                        <li class="nested">
+                            <a href="#/categories">Categories</a>
+
+                        </li>
                         <li><a href="#/works">Works</a></li>
                         <li id="add-recipe"><a href="#/add-recipe">Add Recipe</a></li>
                         <li><a href="#/contact">Contact</a></li>
@@ -73,14 +76,14 @@
         <div class="wrapper">
             <div class="container-fluid">
                 <!-- Example row of columns -->
-                <div class="row">
-                    <div class="col-md-4 footer-item footer-item-1">
+                <div class="row" id="inner-footer">
+                    <div class="col-md-4 col-sm-6 footer-item footer-item-1">
                         <h2>Who We Are</h2>
                         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio
                             dui.
                         </p>
                     </div>
-                    <div class="col-md-4 footer-item footer-item-2">
+                    <div class="col-md-4 col-sm-6 footer-item footer-item-2">
                         <h2>Custom Text Widget</h2>
                         <ul id="nested">
                             <li>Rhoncus quis varius sed velit nibh moles</li>
@@ -91,7 +94,7 @@
                             <li>Vivamus ut cursus augue nibh sodales sed </li>
                         </ul>
                     </div>
-                    <div class="col-md-4 footer-item">
+                    <div class="col-md-4 col-sm-6 footer-item">
                         <h2>Recent Posts</h2>
                         <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
                             sit amet risus.</p>
