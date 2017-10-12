@@ -27,13 +27,7 @@
 
                     </header>
                 </div>
-                <div id="register-link" class="col-md-6 right">
-                    <a id="signin" href="#/register">Sign up/Sign in</a>
-                    <a id="current-user" href=""></a>
-                    <a id="logout" role="button" tabindex="0">Log out</a>
-                </div>
             </div>
-
         </div>
         <nav class="navbar navbar-default" id="main-nav">
             <div class="container">
@@ -56,18 +50,15 @@
                         <li><a href="#/works">Works</a></li>
                         <li id="add-recipe"><a href="#/add-recipe">Add Recipe</a></li>
                         <li><a href="#/contact">Contact</a></li>
+                        <li><a id="register" href="#/register">Register</a></li>
+                        <li><a id="login" href="#/login">Login</a></li>
+                        <li><a id="logout" role="button" tabindex="0">Log out</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="social">
-                            <a href="#" class="social-link"><img src="images/twitter.png" width="22" height="22" alt="Twitter-icon"></a>
-                        </li>
-                        <li class="social">
-                            <a href="#" class="social-link"><img src="images/RSS.png" width="18" height="18" alt="RSS-icon"></a>
-                        </li>
-                        <li class="social">
-                            <a href="#" class="social-link"><img src="images/facebook.png" width="17" height="17" alt="facebook-icon"></a>
-                        </li>
-                    </ul>
+                    <div class="nav navbar-nav navbar-right">
+                        <a href="https://twitter.com/" class="social-link"><img src="./images/tw_btn.png" alt="Twitter-icon"></a>
+                        <a href="https://rss.com/" class="social-link"><img src="images/rss_btn.png" alt="RSS-icon"></a>
+                        <a href="https://www.facebook.com/" class="social-link"><img src="images/fb_btn.png" alt="facebook-icon"></a>
+                    </div>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
@@ -79,46 +70,50 @@
     <div id="main-content"></div>
 
     <footer id="footer">
-        <div class="container">
-            <!-- Example row of columns -->
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>Who We Are</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h2>Custom Text Widget</h2>
-                    <ul id="nested">
-                        <li>Rhoncus quis varius sed velit nibh moles</li>
-                        <li>Mauris quis nunc eu nunc molestie</li>
-                        <li>Egestas et sit amet odio morbi quis nunc </li>
-                        <li>Lacinia velit in nibh sodales sed quis nunc </li>
-                        <li>Pharetra sem feugiat nibh sodales sed </li>
-                        <li>Vivamus ut cursus augue nibh sodales sed </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h2>Recent Posts</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit
-                        amet risus.</p>
+        <div class="wrapper">
+            <div class="container-fluid">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-4 footer-item footer-item-1">
+                        <h2>Who We Are</h2>
+                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio
+                            dui.
+                        </p>
+                    </div>
+                    <div class="col-md-4 footer-item footer-item-2">
+                        <h2>Custom Text Widget</h2>
+                        <ul id="nested">
+                            <li>Rhoncus quis varius sed velit nibh moles</li>
+                            <li>Mauris quis nunc eu nunc molestie</li>
+                            <li>Egestas et sit amet odio morbi quis nunc </li>
+                            <li>Lacinia velit in nibh sodales sed quis nunc </li>
+                            <li>Pharetra sem feugiat nibh sodales sed </li>
+                            <li>Vivamus ut cursus augue nibh sodales sed </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 footer-item">
+                        <h2>Recent Posts</h2>
+                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+                            sit amet risus.</p>
+                    </div>
                 </div>
             </div>
-            <nav id="nav-footer">
-                <div class="wrapper">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Themes</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                    <small>Designed by <p>Elegant WordPress Themes</p> | Powered by <p>WordPress</p>
-                    </small>
-                </div>
-            </nav>
         </div>
+        <nav id="nav-footer">
+            <div class="wrapper">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Themes</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+                <small>Designed by <p>Elegant WordPress Themes</p> | Powered by <p>WordPress</p>
+                                    </small>
+            </div>
+        </nav>
+
     </footer>
 
 

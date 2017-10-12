@@ -23,8 +23,8 @@
 
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
-                $('#signin').addClass('hidden');
-                $('#current-user').html('Hello, ' + firebase.auth().currentUser.email + '!');
+                $('#register').addClass('hidden');
+                $('#login').addClass('hidden');
             } else {
                 $('#logout').addClass('hidden');
                 $('#add-recipe').addClass('hidden');
