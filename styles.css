@@ -215,10 +215,10 @@ nav ul li a:hover {
     background: url('./images/content.png');
     min-height: 930px;
     width: 100%;
-    margin-top: 72px;
     border-top: 1px solid #fff;
     padding-top: 50px;
-    padding-bottom: 300px;
+    padding-bottom: 80px;
+    box-shadow: inset 0px 6px 6px rgba(50, 50, 50, 0.2);
 }
 
 #middle li p {
@@ -229,6 +229,7 @@ nav ul li a:hover {
 
 #info {
     background-image: url('./images/gradient.png');
+    background-repeat: repeat-x;
     width: 100%;
     margin-top: 40px;
     display: inline-block;
@@ -238,8 +239,9 @@ nav ul li a:hover {
 
 #info p {
     text-align: center;
-    font-size: 30px;
-    font-family: 'colaborate-thinregular';
+    font-size: 3rem;
+    font-family: 'colaborate-thin';
+    overflow: hidden;
 }
 
 #quote {
@@ -252,31 +254,25 @@ nav ul li a:hover {
     margin-top: 0;
 }
 
-#additional-info {
-    position: relative;
-    top: 25px;
+#text-area p {
+    height: 100px;
+    overflow: hidden;
 }
 
-#features-list {
-    margin-top: 65px;
+#additional-info {
+    position: relative;
+    display: block;
+    margin: auto;
+    top: 5px;
 }
 
 #features-list h2 {
     font-size: 2.4rem;
+    color: #1f262d;
 }
 
 #thumbnails-container {
     margin-top: 80px;
-}
-
-#thumbnails,
-#thumbnails2 {
-    display: flex;
-    justify-content: space-between;
-}
-
-#thumbnails2 {
-    margin-top: 45px;
 }
 
 footer h2 {
@@ -497,7 +493,6 @@ small>p {
 
 .read-more {
     margin-top: 1.6em;
-    margin-right: 1.5em;
     border-radius: 1em !important;
     background-image: none !important;
     width: 7em !important;
@@ -505,6 +500,14 @@ small>p {
     padding: 0.2em !important;
     height: 2.4em !important;
     font-size: 0.85em !important;
+}
+
+.read-more:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .read-more-black {
@@ -738,6 +741,7 @@ small>p {
 .additional {
     display: flex;
     justify-content: center;
+    background: url('./images/content.png');
 }
 
 .recent .posts .field {
@@ -807,15 +811,11 @@ small>p {
 }
 
 .gallery {
-    display: inline-block;
     margin-top: 50px;
 }
 
-.gallery .thumbnail img {
-    width: 250px;
-    /*set the width or max-width*/
-    height: 130px;
-    /*this makes sure to maintain the aspect ratio*/
+.gallery img:hover {
+    opacity: 0.5;
 }
 
 .posted-by {
@@ -857,4 +857,51 @@ small>p {
     content: "•  ";
     color: #171c25;
     padding-right: 5px;
+}
+
+#features-list .f-1 {
+    padding-left: 0;
+}
+
+#features-list .col-md-3 {
+    padding-top: 25px;
+}
+
+.gallery {
+    padding: .5vw;
+    font-size: 0;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    -ms-flex-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
+    align-content: flex-start;
+}
+
+.gallery-item {
+    flex-basis: 150px;
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 150px;
+    margin: 0.4vw;
+    margin-bottom: 40px;
+}
+
+.gallery-item img {
+    position: relative;
+    height: 100px;
+    width: 150px;
+    border: 5px solid #fff;
+}
+
+@media screen and (max-width: 400px) {
+    .gallery-item {
+        margin: 0;
+    }
+    .gallery {
+        padding: 0;
+    }
 }

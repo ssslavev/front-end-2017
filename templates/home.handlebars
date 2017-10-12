@@ -17,45 +17,57 @@
         <div class="roll">
             <ul id="features-list">
                 <li class="col-md-4">
-                    <img class="pull-left" src="images/f1-icon.png" alt="feature-icon" id="f-1" />
-                    <div class="f-1">
-                        <h2>What We Offer</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum,
-                            id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Etiam malesuada mattis nibh at bibendum. Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis
-                            turpis ac libero interdum, id fringilla purus feugiat.
-                        </p>
-                        <form action="/">
-                            <input type="image" src="images/Read More.png" alt="Read more" class="read-more pull-right">
-                        </form>
+                    <div class="row">
+                        <div class="col-md-3 text-right">
+                            <img src="images/f1-icon.png" alt="feature-icon" id="f-1" />
+                        </div>
+                        <div class="col-md-9 f-1">
+                            <h2>What We Offer</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum,
+                                id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum. Lorem ipsum dolor sit
+                                amet, consectetur adipiscing elit. Etiam malesuada mattis nibh at bibendum. Lorem ipsum dolor
+                                sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. Etiam mollis turpis ac libero interdum, id fringilla purus feugiat.
+                            </p>
+                            <form action="/">
+                                <input type="image" src="images/Read More.png" alt="Read more" class="read-more pull-right">
+                            </form>
+                        </div>
                     </div>
                 </li>
                 <li class="col-md-4">
-                    <img class="pull-left" src="images/f2-icon.png" alt="feature-icon" id="f-2" />
-                    <div class="f-1">
-                        <h2>Who We Are</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum,
-                            id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum. Etiam mollis turpis ac libero
-                            interdum, id fringilla purus feugiat.
-                        </p>
-                        <form action="/action_page.php">
-                            <input type="image" src="images/Read More.png" alt="Read more" class="read-more pull-right">
-                        </form>
+                    <div class="row">
+                        <div class="col-md-3 text-right">
+                            <img src="images/f2-icon.png" alt="feature-icon" id="f-2" />
+                        </div>
+                        <div class="col-md-9 f-1">
+                            <h2>Who We Are</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum,
+                                id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum. Etiam mollis turpis
+                                ac libero interdum, id fringilla purus feugiat.
+                            </p>
+                            <form action="/action_page.php">
+                                <input type="image" src="images/Read More.png" alt="Read more" class="read-more pull-right">
+                            </form>
+                        </div>
                     </div>
                 </li>
                 <li class="col-md-4">
-                    <img class="pull-left" src="images/f3-icon.png" alt="feature-icon" id="f-3" />
-                    <div class="f-1">
-                        <h2>Our Mission</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum,
-                            id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum. Etiam mollis turpis ac libero
-                            interdum, id fringilla purus feugiat. Etiam mollis turpis ac libero interdum, id fringilla purus
-                            feugiat.
-                        </p>
-                        <form action="/action_page.php">
-                            <input type="image" src="images/Read More.png" alt="Read more" class="read-more pull-right">
-                        </form>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="images/f3-icon.png" alt="feature-icon" id="f-3" />
+                        </div>
+                        <div class="col-md-9 f-1">
+                            <h2>Our Mission</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis turpis ac libero interdum,
+                                id fringilla purus feugiat. Etiam malesuada mattis nibh at bibendum. Etiam mollis turpis
+                                ac libero interdum, id fringilla purus feugiat. Etiam mollis turpis ac libero interdum, id
+                                fringilla purus feugiat.
+                            </p>
+                            <form action="/action_page.php">
+                                <input type="image" src="images/Read More.png" alt="Read more" class="read-more pull-right">
+                            </form>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -68,29 +80,31 @@
                     <img src="images/quote.png" alt="quote-icon" id="quote" />
                     <p>Vivamus id feugiat ligula. Nulla facilisi. Integer lacus justo, elementum eget consequat a, molestie
                         nec sapien. Quisque tincidunt, nunc vitae adipiscing</p>
-                </div>
-                <div class="additional col-md-12  col-fixed triggered">
+
                     <img src="../images/additional-info.png" alt="additional-info-button" id="additional-info" />
+
                 </div>
+
             </div>
         </div>
     </div>
     <div class="wrapper">
-    <div class="container-fluid">
-        <div class="row display-flex">
-            <div class='list-group gallery'>
-            {{#each recipes}}
-            <div class="col-sm-5 col-md-3">
-                <a href="#/recipes/{{this._key}}" class="thumbnail">
-                        <img  class="img-responsive" src="{{this.image}}"  alt="...">
+
+      
+            <div class='gallery'>
+                {{#each recipes}}
+                <div class="gallery-item">
+                    <a href="#/recipes/{{this._key}}" >
+                        <img  src="{{this.image}}"  alt="...">
                     </a>
+                </div>
+                {{/each}}
             </div>
-            {{/each}}
-            </div>
-        </div>
-    </div>
+       
     </div>
 </div>
+
+
 
 <script>
     $(function () {
