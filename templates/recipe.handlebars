@@ -21,7 +21,7 @@
             </div>
             {{/each}}
             <div class="row">
-                <div class="col-md-8" id="recipe">
+                <div class="col-md-8 recipe-single" id="recipe">
                     {{#each recipeArr}}
                     <div class="row">
                         <div class="posted-by">
@@ -41,7 +41,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row" id="comments-detail">
                             {{#each comments}}
                             <div class="col-sm-2">
                                 <div class="thumbnail">
@@ -97,6 +97,15 @@
                     <div class="row">
                         <div class="container-fluid posts text-left">
                             <h4 class="text-left">Recent Posts</h4>
+                            <div class="container-fluid color-light field">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ex cumque laborum voluptates
+                                    fugit nisi aut, dicta aliquam consequatur in, natus expedita Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Ipsam ex cumque laborum voluptates fugit nisi aut, dicta
+                                    </p>
+                            </div>
+                        </div>
+                        <div class="container-fluid comments text-left">
+                            <h4>Recent Posts</h4>
                             <div class="container-fluid color-light field">
                                 <ul>
                                     {{#each limitRecipes}}

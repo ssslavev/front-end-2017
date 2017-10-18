@@ -98,12 +98,6 @@ nav ul li a:hover {
     color: #8d96a0;
 }
 
-#main-nav ul li a:focus {
-    color: #8d96a0;
-    font-style: italic;
-    font-family: serif;
-}
-
 .navbar-nav.navbar-right {
     margin-right: 22px;
     margin-top: 18px;
@@ -884,6 +878,12 @@ small>p {
     line-height: 20px;
 }
 
+.active {
+    color: #8d96a0 !important;
+    font-style: italic;
+    font-family: serif;
+}
+
 .recent .comments .field ul {
     list-style-type: none;
     margin: 1.8em 0em;
@@ -1186,6 +1186,35 @@ small>p {
     background: url("../images/slider-right-arrow.png") no-repeat top;
     order: 4;
     flex-grow: 1;
+}
+
+.slide-frame.frame-0:after,
+.slide-frame.frame-0:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 3px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    background: #000;
+    box-shadow: 0 15px 10px #000;
+    transform: rotate(-6deg);
+}
+
+.slide-frame.frame-0:after {
+    transform: rotate(6deg);
+    right: 10px;
+    left: auto;
+}
+
+.recipe-single {
+    padding-left: 15px !important;
+}
+
+#comments-detail {
+    margin-left: 0 !important;
 }
 
 .frame-3 {

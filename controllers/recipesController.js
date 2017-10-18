@@ -64,7 +64,7 @@ let recipeController = (function() {
         let lastComments;
         let recipeArr = [];
 
-        Promise.all([data.recipes.getById(id), data.recipes.getLimitRecipes(5), data.recipes.getLastComments(8)])
+        Promise.all([data.recipes.getById(id), data.recipes.getLimitRecipes(8), data.recipes.getLastComments(8)])
             .then(([snap, reqLimitRecipes, reqLastComments]) => {
 
                 recipe = snap.val();
