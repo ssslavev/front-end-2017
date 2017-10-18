@@ -12,16 +12,18 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@types/moment": "^2.13.0",
         "@types/pump": "^1.0.1",
         "@types/sammy": "0.0.20",
         "@types/slick-carousel": "^1.6.32",
         "bootstrap": "^3.3.7",
         "handlebars": "^4.0.10",
+        "harp": "*",
         "jquery": "^3.2.1",
+        "moment": "^2.19.1",
         "pump": "^1.0.2",
         "sammy": "^0.7.6",
-        "slick-carousel": "^1.8.1",
-        "harp": "*"
+        "slick-carousel": "^1.8.1"
     },
     "devDependencies": {
         "@types/babel-core": "^6.25.2",

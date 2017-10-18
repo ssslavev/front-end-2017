@@ -1,8 +1,22 @@
+<div class="wrapper">
+    <h1 class="main-heading">All Recipes</h1>
+</div>
 <div id="middle">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-2 my-breadcrumb">
+                    <div id="heading">
+                        <h5>
+                            <a href="#/home">Home</a>
+                        </h5>
+                        <span>»</span>
+                        <span>All Recipes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row posts-content">
+                <div class="col-md-8">
                     {{#if recipes}} {{#each recipes}}
                     <div class="row">
                         <div class="col-md-12" id="recipe">
@@ -25,26 +39,23 @@
                     </div>
                     {{/each}}{{/if}}
                 </div>
-                <div class="col-md-3 col-md-offset-1 recent pull-left">
+                <div class="col-md-4  recent pull-left">
                     <div class="row">
                         <div class="container-fluid posts text-left">
-                            <h4 class="text-left">Recent Recipes</h4>
+                            <h4>Recent Posts</h4>
                             <div class="container-fluid color-light field">
-                                <ul>
-                                    {{#each limitRecipes}}
-                                    <li><a href="#/recipes/{{this._key}}">{{title}}</a></li>
-                                    {{/each}}
-                                </ul>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ex cumque laborum voluptates fugit nisi aut, dicta aliquam consequatur in, natus expedita
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ex cumque laborum voluptates fugit nisi aut, dicta </p>   
                             </div>
                         </div>
                         <div class="container-fluid comments text-left">
-                            <h4 class="text-left">Recent Comments</h4>
+                            <h4>Recent Posts</h4>
                             <div class="container-fluid color-light field">
                                 <ul>
-                                    {{#each lastComments}}
-                                    {{#each comments}}
-                                    <li><a href="#/posts/{{postId}}">{{this.text}}</a></li>
-                                    {{/each}}
+                                    {{#each limitRecipes}}
+                                    <li>
+                                        <a href="#/recipes/{{this._key}}">{{title}}</a>
+                                    </li>
                                     {{/each}}
                                 </ul>
                             </div>

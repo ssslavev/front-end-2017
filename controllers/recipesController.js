@@ -18,13 +18,13 @@ let recipeController = (function() {
                     //console.log(text);
 
                     const database = firebase.database();
-
+                    let options = { year: 'numeric', month: 'long', day: 'numeric' };
                     database.ref('recipes/').push({
                         title: title,
                         category: category,
                         image: image,
                         text: text,
-                        date: new Date().toLocaleString(),
+                        date: moment().format('LL'),
                         uid: firebase.auth().currentUser.uid,
                         userEmail: firebase.auth().currentUser.email
                     }).then(() => {
@@ -39,7 +39,7 @@ let recipeController = (function() {
         let limitRecipes;
         let lastComments;
 
-        Promise.all([data.recipes.getAllRecipes(), data.recipes.getLimitRecipes(5), data.recipes.getLastComments(8)])
+        Promise.all([data.recipes.getAllRecipes(), data.recipes.getLimitRecipes(8), data.recipes.getLastComments(8)])
             .then(([reqRecipes, reqLimitRecipes, reqLastComments]) => {
                 recipes = reqRecipes.reverse();
                 limitRecipes = reqLimitRecipes;

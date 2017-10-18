@@ -219,7 +219,7 @@ nav ul li a:hover {
     min-height: 930px;
     width: 100%;
     border-top: 1px solid #fff;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 80px;
     box-shadow: inset 0px 6px 6px rgba(50, 50, 50, 0.2);
 }
@@ -228,6 +228,34 @@ nav ul li a:hover {
     color: #838383;
     height: 140px;
     overflow: hidden;
+}
+
+#heading {
+    font-family: 'Droid Sans';
+    font-size: 1.2rem;
+    color: #a3a3a3;
+}
+
+#heading h5 a {
+    font-family: 'Droid Sans';
+    font-size: 1.2rem;
+    color: #a3a3a3;
+}
+
+#heading h5 {
+    display: inline;
+}
+
+#heading span {
+    color: #7e7d7d
+}
+
+.my-breadcrumb {
+    padding: 0;
+}
+
+.posts-content {
+    margin-top: 47px;
 }
 
 #info {
@@ -281,6 +309,12 @@ nav ul li a:hover {
 
 footer h2 {
     color: #fff;
+}
+
+.field ul {
+    font-family: 'Droid Sans';
+    font-size: 1.2rem;
+    color: #5e5e5e;
 }
 
 footer p,
@@ -463,6 +497,8 @@ small>p {
     height: 1px;
     position: relative;
     background-color: #fff;
+    margin-top: 16px;
+    margin-bottom: 14px;
 }
 
 .line-with-shadow:before {
@@ -513,10 +549,14 @@ small>p {
     transform: scale(1.1);
 }
 
+#additional-info:hover {
+    opacity: 0.5;
+    cursor: pointer
+}
+
 .read-more-black {
     background-color: #303840;
     margin-top: 1.6em;
-    margin-right: 1.5em;
     border-radius: 1em !important;
     background-image: none !important;
     width: 7em !important;
@@ -528,10 +568,29 @@ small>p {
 
 .read-more-black a {
     color: #fff;
+    font-family: 'Droid Sans';
+    font-size: 1.2rem;
 }
 
 .read-more-black a:hover {
     text-decoration: none;
+    color: #000;
+}
+
+.read-more-black:hover a {
+    text-decoration: none;
+    color: #000;
+}
+
+.posts-content h4 {
+    font-size: 2.4rem;
+    font-family: 'colaborate-thin';
+}
+
+.posts h4,
+.comments h4 {
+    font-size: 2.4rem;
+    font-family: 'colaborate-thin';
 }
 
 .read-more a {
@@ -556,17 +615,27 @@ small>p {
     color: #000;
 }
 
+#recipe {
+    padding-left: 0;
+}
+
 #recipe article {
-    text-align: justify;
-    word-break: break-all;
+    text-align: left;
 }
 
 #recipe p {
     color: #838383;
+    height: 220px;
+    overflow-y: hidden;
+    font-family: 'Droid Sans';
+    font-size: 1.2rem;
 }
 
 #recipe img {
+    display: block;
     margin-right: 25px;
+    height: 220px;
+    width: 220px;
 }
 
 .panel {
@@ -739,6 +808,7 @@ small>p {
 
 #recent {
     width: 40%;
+    padding-right: 0;
 }
 
 .additional {
@@ -752,6 +822,13 @@ small>p {
     border: 1px solid #d3d3d3;
     width: 272px;
     background-image: url('./images/aside-gradient.png');
+    padding-top: 30px;
+    padding-left: 25px;
+    font-family: 'Droid Sans';
+    font-size: 1.2rem;
+    color: #5e5e5e;
+    padding-bottom: 25px;
+    line-height: 20px;
 }
 
 .recent .posts .field ul {
@@ -760,6 +837,12 @@ small>p {
     padding-left: 30px;
     text-align: left !important;
     width: 240px;
+    height: 154px;
+}
+
+.color-light p {
+    height: 140px;
+    width: 220px;
 }
 
 .recent .posts .field ul li {
@@ -768,8 +851,9 @@ small>p {
 }
 
 .recent .posts .field ul li a {
-    font-size: 0.9em;
-    color: #000;
+    font-size: 1.2rem;
+    font-family: 'Droid Sans';
+    color: #5e5e5e;
 }
 
 .recent .posts .field ul li+li {
@@ -778,13 +862,26 @@ small>p {
 
 .recent .comments h4 {
     margin-top: 1.3em;
-    margin-left: 0.5em;
+}
+
+.posts h4,
+.comments h4 {
+    margin-left: 40px;
+}
+
+.container-fluid.posts,
+.container-fluid.color-light,
+.container-fluid.comments {
+    padding-right: 0;
+    margin-right: 0;
 }
 
 .recent .comments .field {
     border-radius: 0.8em;
     border: 1px solid #d3d3d3;
     width: 272px;
+    background-image: url('./images/recent-posts-gradient.png');
+    line-height: 20px;
 }
 
 .recent .comments .field ul {
@@ -801,8 +898,8 @@ small>p {
 }
 
 .recent .comments .field ul li a {
-    font-size: 0.9em;
-    color: #000;
+    font-size: 1.2rem;
+    color: #5e5e5e;
 }
 
 .recent .comments .field ul li+li {
@@ -1027,6 +1124,9 @@ small>p {
     width: 470px;
     height: 35px;
     overflow: hidden;
+    font-family: colaborate-thin;
+    font-size: 2.4rem;
+    font-weight: 300;
 }
 
 .slide-frame.frame-0 .slide-icons {
@@ -1124,6 +1224,9 @@ small>p {
     .slide-frame {
         display: none;
     }
+    h2 {
+        font-weight: normal;
+    }
     .slide-frame.frame-0 {
         display: inline-block;
         left: 0;
@@ -1181,4 +1284,12 @@ small>p {
     top: 5px;
     /* background-color: red; */
     height: 180px;
+}
+
+.main-heading {
+    color: #fff;
+    font-family: colaborate-thin;
+    font-size: 3rem;
+    margin-bottom: 16px;
+    font-weight: normal;
 }

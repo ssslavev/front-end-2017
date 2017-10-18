@@ -1,11 +1,29 @@
+{{#each recipeArr}}
+<div class="wrapper">
+    <h1 class="main-heading">{{this.title}}</h1>
+</div>
+
 <div id="middle">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-7" id="recipe">
+                <div class="col-md-3 my-breadcrumb">
+                    <div id="heading">
+                        <h5>
+                            <a href="#/home">Home</a>
+                        </h5>
+                        <span>»</span>
+                        <span>Recipes</span>
+                        <span>»</span>
+                        <span>{{this.title}}</span>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            <div class="row">
+                <div class="col-md-8" id="recipe">
                     {{#each recipeArr}}
                     <div class="row">
-                        <h1 id="post-title">{{this.title}}</h1>
                         <div class="posted-by">
                             <hr class="line-with-shadow" /> Posted by {{this.userEmail}} on {{this.date}} in {{this.category}} | {{this.commentsCount}}
                             Comments
@@ -32,14 +50,15 @@
                                 <!-- /thumbnail -->
                             </div>
                             <!-- /col-sm-1 -->
-                            
+
                             <div class="col-sm-10">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+                                        <strong>myusername</strong>
+                                        <span class="text-muted">commented 5 days ago</span>
                                     </div>
                                     <div class="panel-body">
-                                         {{text}} 
+                                        {{text}}
                                     </div>
                                     <!-- /panel-body -->
                                 </div>
@@ -60,7 +79,8 @@
                                         <div class="status-upload">
                                             <form>
                                                 <textarea id="recipe-comment" placeholder="What are you doing right now?"></textarea>
-                                                <button type="button" id="comment-submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+                                                <button type="button" id="comment-submit" class="btn btn-success green">
+                                                    <i class="fa fa-share"></i> Share</button>
                                             </form>
                                         </div>
                                         <!-- Status Upload  -->
@@ -73,14 +93,16 @@
                     </div>
                     {{/each}}
                 </div>
-                <div class="col-md-3 col-md-offset-1 recent pull-left">
+                <div class="col-md-4 recent pull-left">
                     <div class="row">
                         <div class="container-fluid posts text-left">
                             <h4 class="text-left">Recent Posts</h4>
                             <div class="container-fluid color-light field">
                                 <ul>
-                                   {{#each limitRecipes}}
-                                    <li><a href="#/recipes/{{this._key}}">{{title}}</a></li>
+                                    {{#each limitRecipes}}
+                                    <li>
+                                        <a href="#/recipes/{{this._key}}">{{title}}</a>
+                                    </li>
                                     {{/each}}
                                 </ul>
                             </div>
@@ -89,11 +111,11 @@
                             <h4 class="text-left">Recent Comments</h4>
                             <div class="container-fluid color-light field">
                                 <ul>
-                                   {{#each lastComments}}
-                                    {{#each comments}}
-                                    <li><a href="#/posts/{{postId}}">{{this.text}}</a></li>
-                                    {{/each}}
-                                    {{/each}}
+                                    {{#each lastComments}} {{#each comments}}
+                                    <li>
+                                        <a href="#/posts/{{postId}}">{{this.text}}</a>
+                                    </li>
+                                    {{/each}} {{/each}}
                                 </ul>
                             </div>
                         </div>
