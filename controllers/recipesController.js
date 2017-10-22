@@ -84,14 +84,27 @@ let recipeController = (function() {
                     const database = firebase.database();
 
                     let comment = $('#recipe-comment').val();
+                    let author = firebase.auth().currentUser.email;
+                    let date = moment().format('MM-DD-YYYY');
+
+
                     //console.log(comment);
                     database.ref(`recipes/${id}/comments/`).push({
-                            text: comment
+                            text: comment,
+                            author: author,
+                            date: date
                         })
                         .then(() => {
 
-                            window.location.href = `#/recipes/${id}`
-                            location.reload();
+                            return templates.get('comment');
+
+                            //window.location.href = `#/recipes/${id}`
+                            //location.reload();
+                        })
+                        .then((tmpl) => {
+                            console.log(comment);
+                            $('#users-comments').append(tmpl({ text: comment, author: author, date: date }));
+                            $('#recipe-comment').val('');
                         })
                 });
             })
