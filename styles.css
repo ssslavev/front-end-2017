@@ -42,7 +42,6 @@ img {
 
 body {
     background-image: url('./images/back.jpeg');
-    background-size: cover;
     background-repeat: no-repeat;
     font-family: inherit;
 }
@@ -79,7 +78,7 @@ nav ul li a:hover {
 
 #main {
     margin: 65px auto;
-    max-width: 960px;
+    max-width: 991px;
     margin-bottom: 60px;
 }
 
@@ -1048,8 +1047,7 @@ small>p {
 }
 
 #not-overflow {
-    overflow: visible;
-    position: absolute;
+    overflow: unset;
 }
 
 .nested ul {
