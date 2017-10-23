@@ -5,7 +5,7 @@ let recipeController = (function() {
             .then((tmpl) => {
                 context.$element().html(tmpl);
 
-                $("body").on('click', '#recipe-submit', () => {
+                $("body").off().on('click', '#recipe-submit', () => {
 
                     let title = $("#recipe-title").val();
                     let category = $('#recipe-category').val();
@@ -79,8 +79,8 @@ let recipeController = (function() {
             .then((tmpl) => {
                 context.$element().html(tmpl({ recipeArr, limitRecipes, lastComments }));
 
-                $("body").on('click', '#comment-submit', () => {
-
+                $("body").off().on('click', '#comment-submit', (event) => {
+                    event.preventDefault();
                     const database = firebase.database();
 
                     let comment = $('#recipe-comment').val();
