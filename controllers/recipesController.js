@@ -87,14 +87,21 @@ let recipeController = (function() {
                     let author = firebase.auth().currentUser.email;
                     let date = moment().format('MM-DD-YYYY');
 
-
-                    //console.log(comment);
-                    database.ref(`recipes/${id}/comments/`).push({
+                    Promise.all([
+                        database.ref(`recipes/${id}/comments/`).push({
+                            text: comment,
+                            author: author,
+                            date: date
+                        }),
+                        database.ref('comments/').push({
                             text: comment,
                             author: author,
                             date: date
                         })
-                        .then(() => {
+                    ])
+
+
+                    .then(() => {
 
                             return templates.get('comment');
 

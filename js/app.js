@@ -22,6 +22,7 @@
         //console.log(firebase.auth().currentUser);
 
         firebase.auth().onAuthStateChanged(function(user) {
+            console.log(user);
             if (user) {
                 $('#register').addClass('hidden');
                 $('#login').addClass('hidden');

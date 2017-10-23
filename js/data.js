@@ -60,17 +60,18 @@ data = (function() {
     function getLastComments(limit) {
         let comments = [];
 
-        return firebase.database().ref().child('recipes').limitToLast(limit).once('value')
+        return firebase.database().ref().child('comments').limitToLast(limit).once('value')
             .then((snapshot) => {
 
                 snapshot.forEach((child) => {
                     comments.push({
-                        comments: child.val().comments,
+                        text: child.val().text,
                     });
 
                 })
 
             }).then(() => {
+                console.log(comments);
                 return comments;
             })
     }
