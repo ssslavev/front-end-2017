@@ -15,7 +15,11 @@ let authController = (function() {
                     const promise = auth.createUserWithEmailAndPassword(email, password);
 
                     promise.then(user => console.log(user))
-                        .catch(e => console.log(e.message));
+                        .catch(e => {
+                            if (e.message.includes('The email address is already in use by another account.')) {
+                                console.log('Yahooo');
+                            }
+                        });
                     context.redirect('#/home');
 
                 });

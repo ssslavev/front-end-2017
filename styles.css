@@ -3,6 +3,11 @@
     src: url('./fonts/Colaborate-fontfacekit/web fonts/colaborate_thin_macroman/ColabThi-webfont.woff');
 }
 
+@font-face {
+    font-family: blackjack;
+    src: url('./fonts/blackjack-fontfacekit/web fonts/blackjack_regular_macroman/blackjack-webfont.woff');
+}
+
 html,
 body,
 ul,
@@ -44,6 +49,21 @@ body {
 
 nav ul li a:hover {
     color: #8D96A0;
+}
+
+.responsive-logo {
+    font-family: blackjack;
+    font-size: 3.6rem;
+    color: #fff !important;
+}
+
+.responsive-logo a {
+    color: #d6d6d6 !important;
+    text-decoration: none;
+}
+
+.responsive-logo a:hover {
+    text-decoration: none;
 }
 
 #register-link {
@@ -100,6 +120,11 @@ nav ul li a:hover {
 .navbar-nav.navbar-right {
     margin-right: 22px;
     margin-top: 18px;
+    display: flex;
+}
+
+.navbar-nav.navbar-right a {
+    padding-left: 4px;
 }
 
 .navbar-nav.navbar-right .btn {
@@ -115,12 +140,10 @@ nav ul li a:hover {
 }
 
 .navbar .navbar-collapse {
-    position: relative;
     overflow: hidden !important;
 }
 
 .navbar .nav-collapse {
-    position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
@@ -171,6 +194,10 @@ nav ul li a:hover {
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
     border: none !important;
+}
+
+.container>.navbar-collapse {
+    margin-left: -15px;
 }
 
 @media screen and (max-width: 769px) {
@@ -307,7 +334,18 @@ nav ul li a:hover {
     top: -15px;
 }
 
+#users-comments .panel-heading {
+    padding-bottom: 0;
+}
+
+#users-comments .panel-body {
+    padding-top: 0;
+}
+
 @media only screen and (max-width: 768px) {
+    #recipe {
+        padding-left: 30px !important;
+    }
     footer #nav-footer {
         height: 120px;
         padding-left: 35px;
@@ -990,6 +1028,11 @@ small>p {
     background-image: url('./images/back-bottom.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100px;
 }
 
 #nested {
