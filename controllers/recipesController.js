@@ -35,13 +35,17 @@ let recipeController = (function() {
     }
 
     function getAllRecipes(context) {
+        let page = +context.params.page;
+        let max = page * 2;
+        let min = max - 2;
+        console.log(page)
         let recipes = [];
         let limitRecipes;
         let lastComments;
 
-        Promise.all([data.recipes.getAllRecipes(), data.recipes.getLimitRecipes(8), data.recipes.getLastComments(8)])
+        Promise.all([data.recipes.getAllRecipes(), data.recipes.getLimitRecipes(8), data.recipes.getLastComments(3)])
             .then(([reqRecipes, reqLimitRecipes, reqLastComments]) => {
-                recipes = reqRecipes.reverse();
+                recipes = reqRecipes.reverse().slice(min, max);
                 limitRecipes = reqLimitRecipes;
                 lastComments = reqLastComments;
                 console.log(recipes);
@@ -50,6 +54,11 @@ let recipeController = (function() {
             })
             .then((tmpl) => {
                 context.$element().html(tmpl({ recipes: recipes, limitRecipes: limitRecipes, lastComments: lastComments }));
+
+                $('#pagination a').click(function() {
+                    $('#pagination a').removeClass("active");
+                    $(this).addClass("active");
+                })
 
             })
     }

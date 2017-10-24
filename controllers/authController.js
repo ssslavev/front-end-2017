@@ -21,6 +21,7 @@ let authController = (function() {
                             }
                         });
                     context.redirect('#/home');
+                    location.reload(true);
 
                 });
             })
